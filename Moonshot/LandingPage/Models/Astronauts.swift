@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Astronauts: Codable {
+    var astronauts: [Astronaut]?
+}
+
 struct Astronaut: Codable, Identifiable {
     var id: String?
     var name: String?
