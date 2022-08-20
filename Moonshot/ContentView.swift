@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var services = Services()
-    
     @State var missions = [Mission]()
     
     var body: some View {
@@ -17,17 +15,14 @@ struct ContentView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(missions) { mission in
-                        
                         Text(mission.description!)
-                        
                     }
                 }
             }
-            
         }
         .task {
             do {
-                missions = try await services.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/missions.json")
+                missions = try await Services.shared.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/missions.json")
             } catch {
                 print(error)
             }

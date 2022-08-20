@@ -7,39 +7,9 @@
 
 import Foundation
 
-class Services: ObservableObject {
-    @Published private(set) var missions = [Mission]()
+class Services {
     
-    func getMissions(_ url: String) {
-        let session = URLSession.shared
-        let decoder = JSONDecoder()
-        
-        guard let jsonURL = URL(string: url) else {
-            print("Invalid url")
-            fatalError()
-        }
-        
-        let task = session.dataTask(with: jsonURL) { data, response, error in
-            if let error = error {
-                print(error.localizedDescription)
-                fatalError()
-            }
-            
-            guard let data = try? Data(contentsOf: jsonURL) else {
-                fatalError("Could not retrieve api data")
-            }
-            
-            guard let jsonData = try? decoder.decode([Mission].self, from: data) else {
-                fatalError("Could not decode json data")
-            }
-            
-            DispatchQueue.main.async {
-                self.missions = jsonData
-            }
-            
-        }
-        task.resume()
-    }
+    static var shared = Services()
     
     func fetch<T: Codable>(_ url: String) async throws -> [T] {
         let urlObj = URL(string: url)!
