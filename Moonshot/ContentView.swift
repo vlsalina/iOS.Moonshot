@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var missions = [Mission]()
+    @State var astronauts = [String: Astronaut]()
     
     var body: some View {
         VStack {
@@ -22,7 +23,10 @@ struct ContentView: View {
         }
         .task {
             do {
+                astronauts = try await Services.shared.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8/Moonshot/astronauts.json")
+                
                 missions = try await Services.shared.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/missions.json")
+                
             } catch {
                 print(error)
             }
