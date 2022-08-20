@@ -13,6 +13,7 @@
 		617A2D8228B09206003E8EBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617A2D8128B09206003E8EBF /* Preview Assets.xcassets */; };
 		617A2D8E28B09375003E8EBF /* Astronauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D8D28B09375003E8EBF /* Astronauts.swift */; };
 		617A2D9028B0942E003E8EBF /* Missions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D8F28B0942E003E8EBF /* Missions.swift */; };
+		617A2D9228B09983003E8EBF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D9128B09983003E8EBF /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		617A2D8128B09206003E8EBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		617A2D8D28B09375003E8EBF /* Astronauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronauts.swift; sourceTree = "<group>"; };
 		617A2D8F28B0942E003E8EBF /* Missions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missions.swift; sourceTree = "<group>"; };
+		617A2D9128B09983003E8EBF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		617A2D8C28B09351003E8EBF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				617A2D9128B09983003E8EBF /* Services.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617A2D9228B09983003E8EBF /* Services.swift in Sources */,
 				617A2D7D28B09202003E8EBF /* ContentView.swift in Sources */,
 				617A2D8E28B09375003E8EBF /* Astronauts.swift in Sources */,
 				617A2D9028B0942E003E8EBF /* Missions.swift in Sources */,
