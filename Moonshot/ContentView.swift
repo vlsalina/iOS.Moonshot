@@ -10,11 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var services = Services()
     
+    @State var missions = [Mission]()
+    
     var body: some View {
         VStack {
             ScrollView {
                 LazyVStack {
-                    ForEach(services.missions) { mission in
+                    ForEach(missions) { mission in
                         
                         Text(mission.description!)
                         
@@ -23,8 +25,12 @@ struct ContentView: View {
             }
             
         }
-        .onAppear() {
-            services.decode("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/missions.json")
+        .task {
+            do {
+                missions = try await services.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/missions.json")
+            } catch {
+                print(error)
+            }
         }
     }
 }

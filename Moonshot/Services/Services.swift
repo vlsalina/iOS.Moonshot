@@ -10,7 +10,7 @@ import Foundation
 class Services: ObservableObject {
     @Published private(set) var missions = [Mission]()
     
-    func decode(_ url: String) {
+    func getMissions(_ url: String) {
         let session = URLSession.shared
         let decoder = JSONDecoder()
         
@@ -40,4 +40,17 @@ class Services: ObservableObject {
         }
         task.resume()
     }
+    
+    func fetch<T: Codable>(_ url: String) async throws -> [T] {
+        let urlObj = URL(string: url)!
+        
+        let (data, _) = try await URLSession.shared.data(from: urlObj)
+        
+        let decoder = JSONDecoder()
+        let result = try decoder.decode([T].self, from: data)
+        
+        return result
+    }
+
+    
 }
