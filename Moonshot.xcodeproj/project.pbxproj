@@ -14,6 +14,7 @@
 		617A2D8E28B09375003E8EBF /* Astronauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D8D28B09375003E8EBF /* Astronauts.swift */; };
 		617A2D9028B0942E003E8EBF /* Missions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D8F28B0942E003E8EBF /* Missions.swift */; };
 		617A2D9228B09983003E8EBF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D9128B09983003E8EBF /* Services.swift */; };
+		617A2D9428B1AE74003E8EBF /* MissionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D9328B1AE73003E8EBF /* MissionCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		617A2D8D28B09375003E8EBF /* Astronauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronauts.swift; sourceTree = "<group>"; };
 		617A2D8F28B0942E003E8EBF /* Missions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missions.swift; sourceTree = "<group>"; };
 		617A2D9128B09983003E8EBF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		617A2D9328B1AE73003E8EBF /* MissionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		617A2D8928B0933A003E8EBF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				617A2D9328B1AE73003E8EBF /* MissionCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617A2D9428B1AE74003E8EBF /* MissionCard.swift in Sources */,
 				617A2D9228B09983003E8EBF /* Services.swift in Sources */,
 				617A2D7D28B09202003E8EBF /* ContentView.swift in Sources */,
 				617A2D8E28B09375003E8EBF /* Astronauts.swift in Sources */,
