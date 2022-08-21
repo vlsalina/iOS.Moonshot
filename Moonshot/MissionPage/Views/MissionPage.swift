@@ -14,7 +14,7 @@ struct MissionPage: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            VStack(alignment: .leading) {
                 ScrollView {
                     AsyncImage(
                         url: URL(string: "https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/Images/apollo\(String(describing: mission!.id!))%403x.png"),
@@ -35,6 +35,27 @@ struct MissionPage: View {
                         Text(mission!.description!)
                             .foregroundColor(.white)
                     }
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Crew")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding([.bottom], 5)
+                            Spacer()
+                        }
+                        ScrollView(.horizontal) {
+                            LazyHStack {
+                                ForEach(mission!.crew!, id: \.name) { crewMember in
+                                    CrewMemberView(crewMember: crewMember)
+                                }
+                            }
+                        }
+                    }
+                    .padding(.vertical)
+                    
+                    
                 }
             }
             .padding(.horizontal)
