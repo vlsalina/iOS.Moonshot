@@ -14,7 +14,7 @@ struct ContentView: View {
     @State var showNextView = false
     @State var current: Mission?
     
-    let cols = [GridItem(.adaptive(minimum: 2))]
+    let cols = [GridItem(.adaptive(minimum: 150))]
     
     var body: some View {
         NavigationView {

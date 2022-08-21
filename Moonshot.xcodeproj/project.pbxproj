@@ -27,6 +27,8 @@
 		617A2D8F28B0942E003E8EBF /* Missions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missions.swift; sourceTree = "<group>"; };
 		617A2D9128B09983003E8EBF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		617A2D9328B1AE73003E8EBF /* MissionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCard.swift; sourceTree = "<group>"; };
+		617A2D9628B1B32B003E8EBF /* missions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		617A2D9828B1B360003E8EBF /* astronauts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		617A2D7928B09202003E8EBF /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				617A2D9528B1B30E003E8EBF /* Data */,
 				617A2D8C28B09351003E8EBF /* Services */,
 				617A2D8828B0932B003E8EBF /* LandingPage */,
 				617A2D7A28B09202003E8EBF /* MoonshotApp.swift */,
@@ -117,6 +120,15 @@
 				617A2D9128B09983003E8EBF /* Services.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		617A2D9528B1B30E003E8EBF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				617A2D9628B1B32B003E8EBF /* missions.json */,
+				617A2D9828B1B360003E8EBF /* astronauts.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
