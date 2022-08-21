@@ -23,6 +23,7 @@ struct MissionCard: View {
                 }
             )
             Text("Apollo \(mission.id!)")
+            Text(mission.formattedLaunchDate)
         }
     }
 }

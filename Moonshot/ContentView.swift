@@ -32,6 +32,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("Missions")
             .task {
                 do {
                     astronauts = try await Services.shared.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8/Moonshot/astronauts.json")

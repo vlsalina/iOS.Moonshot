@@ -9,9 +9,13 @@ import Foundation
 
 struct Mission: Codable, Identifiable {
     var id: Int?
-    var launchDate: String?
+    var launchDate: Date?
     var crew: [CrewMember]?
     var description: String?
+    
+    var formattedLaunchDate: String {
+        launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+    }
 }
 
 struct CrewMember: Codable {
