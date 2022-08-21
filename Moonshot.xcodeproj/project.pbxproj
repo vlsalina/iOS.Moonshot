@@ -16,6 +16,7 @@
 		617A2D9228B09983003E8EBF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D9128B09983003E8EBF /* Services.swift */; };
 		617A2D9428B1AE74003E8EBF /* MissionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D9328B1AE73003E8EBF /* MissionCard.swift */; };
 		617A2D9C28B1E781003E8EBF /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2D9B28B1E781003E8EBF /* Color-Theme.swift */; };
+		617A2DA228B204F6003E8EBF /* MissionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2DA128B204F6003E8EBF /* MissionPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		617A2D9128B09983003E8EBF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		617A2D9328B1AE73003E8EBF /* MissionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCard.swift; sourceTree = "<group>"; };
 		617A2D9B28B1E781003E8EBF /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		617A2DA128B204F6003E8EBF /* MissionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		617A2D7928B09202003E8EBF /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				617A2D9D28B203B5003E8EBF /* MissionPage */,
 				617A2D9928B1E76C003E8EBF /* Customizations */,
 				617A2D8C28B09351003E8EBF /* Services */,
 				617A2D8828B0932B003E8EBF /* LandingPage */,
@@ -138,6 +141,38 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		617A2D9D28B203B5003E8EBF /* MissionPage */ = {
+			isa = PBXGroup;
+			children = (
+				617A2DA028B203C8003E8EBF /* ViewModels */,
+				617A2D9F28B203C3003E8EBF /* Models */,
+				617A2D9E28B203BD003E8EBF /* Views */,
+			);
+			path = MissionPage;
+			sourceTree = "<group>";
+		};
+		617A2D9E28B203BD003E8EBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				617A2DA128B204F6003E8EBF /* MissionPage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		617A2D9F28B203C3003E8EBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		617A2DA028B203C8003E8EBF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +246,7 @@
 				617A2D9428B1AE74003E8EBF /* MissionCard.swift in Sources */,
 				617A2D9228B09983003E8EBF /* Services.swift in Sources */,
 				617A2D7D28B09202003E8EBF /* ContentView.swift in Sources */,
+				617A2DA228B204F6003E8EBF /* MissionPage.swift in Sources */,
 				617A2D9C28B1E781003E8EBF /* Color-Theme.swift in Sources */,
 				617A2D8E28B09375003E8EBF /* Astronauts.swift in Sources */,
 				617A2D9028B0942E003E8EBF /* Missions.swift in Sources */,

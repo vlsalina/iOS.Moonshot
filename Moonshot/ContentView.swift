@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State var missions = [Mission]()
-    @State var astronauts = [String: Astronaut]()
     
     @State var showNextView = false
     @State var current: Mission?
@@ -31,6 +30,9 @@ struct ContentView: View {
                         }
                     }
                 }
+                NavigationLink(destination: MissionPage(mission: current), isActive: $showNextView) {
+                    EmptyView()
+                }
             }
             .padding()
             .navigationTitle("Missions")
@@ -38,8 +40,6 @@ struct ContentView: View {
             .preferredColorScheme(.dark)
             .task {
                 do {
-                    astronauts = try await Services.shared.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8/Moonshot/astronauts.json")
-                    
                     missions = try await Services.shared.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/missions.json")
                     
                 } catch {
