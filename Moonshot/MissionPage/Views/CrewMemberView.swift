@@ -35,7 +35,6 @@ struct CrewMemberView: View {
                         .foregroundColor(.white)
                     Spacer()
                 }
-                
             }
             .padding(.horizontal)
             .frame(minWidth: 150)

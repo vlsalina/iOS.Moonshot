@@ -9,12 +9,17 @@ import SwiftUI
 
 struct MissionPage: View {
     @State var astronauts = [String: Astronaut]()
+    @State var current: Astronaut?
+    @State var showNextView = false
     
     var mission: Mission?
     
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading) {
+                NavigationLink(destination: CrewMemberPage(crewMember: current), isActive: $showNextView) {
+                    EmptyView()
+                }
                 ScrollView {
                     AsyncImage(
                         url: URL(string: "https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8-files/Images/apollo\(String(describing: mission!.id!))%403x.png"),
@@ -35,7 +40,6 @@ struct MissionPage: View {
                         Text(mission!.description!)
                             .foregroundColor(.white)
                     }
-                    
                     VStack(alignment: .leading) {
                         HStack {
                             Text("Crew")
@@ -48,14 +52,17 @@ struct MissionPage: View {
                         ScrollView(.horizontal) {
                             LazyHStack {
                                 ForEach(mission!.crew!, id: \.name) { crewMember in
-                                    CrewMemberView(crewMember: crewMember)
+                                    Button(action: {
+                                        current = astronauts[crewMember.name!]
+                                        showNextView = true
+                                    }) {
+                                        CrewMemberView(crewMember: crewMember)
+                                    }
                                 }
                             }
                         }
                     }
                     .padding(.vertical)
-                    
-                    
                 }
             }
             .padding(.horizontal)
@@ -63,10 +70,12 @@ struct MissionPage: View {
             .task {
                 do {
                     astronauts = try await Services.shared.fetch("https://raw.githubusercontent.com/twostraws/HackingWithSwift/main/SwiftUI/project8/Moonshot/astronauts.json")
+                    
                 } catch {
                     print(error)
                 }
             }
+
         }
     }
 }
